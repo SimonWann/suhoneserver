@@ -1,0 +1,17 @@
+{
+  "name": "cloudServe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "3",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "koa-video": "^1.0.4",
+    "koa-websocket": "^6.0.0"
+  }
+}
