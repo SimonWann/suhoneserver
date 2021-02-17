@@ -9,7 +9,7 @@ router.post('/rename', async (ctx) => {
   console.log(ctx.request.body)
   let data = ctx.request.body
   let pathName = path.join(__dirname, '../public', data.path, data.file.name.name)
-  let isSuccess = await fs.promises.rename(pathName, path.join(__dirname, '../public', data.path, data.new))
+  let isSuccess = await fs.promises.rename(pathName, path.join(__dirname, '../public', data.path, data.file.newName))
   if(!isSuccess){
     ctx.body = true
   } else {

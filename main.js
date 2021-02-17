@@ -13,6 +13,11 @@ const init = require('./init/init')
 const playVideo = require('./init/playVideo')
 const message = require('./init/message')
 const deleteFile = require('./init/delete')
+const rename = require('./init/rename')
+const paste = require('./init/paste')
+const mkdir = require('./init/mkdir')
+const upload = require('./init/upload')
+
 
 let port = 3333
 app.listen(port, () => {
@@ -36,4 +41,8 @@ app.use(static(path.join(__dirname, 'video')))
 app.use(init.routes())
 app.use(playVideo.routes())
 soApp.ws.use(message.routes())
+soApp.ws.use(upload.routes())
 app.use(deleteFile.routes())
+app.use(rename.routes())
+app.use(paste.routes())
+app.use(mkdir.routes())
